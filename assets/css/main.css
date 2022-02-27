@@ -1,0 +1,222 @@
+/* START Global-----------
+------------------------ */
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+   padding: 0;
+   margin: 0; 
+   font-family: 'Roboto', sans-serif;
+}
+
+/* section{
+    min-height: 500px;
+} */
+
+/* END Global-----------
+------------------------ */
+
+
+/*START header------------
+--------------------------- */
+header{
+    /* background-color: rgb(180, 201, 201); */
+    /* height: 676px; */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.top-bar{
+    background-color: rgb(89, 94, 143);
+    height: 20px;
+  
+}
+
+.menu{
+    height: 70px;
+    background-color: white;
+
+    padding: 10px;
+
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    /* margin: 0; */
+    padding: 0;
+
+}
+.menu-list-item{
+    padding:0 20px;
+  
+}
+.menu-link{
+    text-decoration: none;
+    color: rgb(87, 85, 85);
+}
+.cover-img{
+    background-image: url("../imgs/cover-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+hgroup{
+   color: white;
+    
+}
+hgroup h1{
+    font-size: 70px;
+    line-height: 25px;
+    text-shadow: 4px 5px 13px rgba(0,0,0,0.74);
+}
+
+hgroup h2{
+    font-size: 50px;
+    text-shadow: 4px 5px 13px rgba(0,0,0,0.74);
+
+    
+}
+/*END header------------
+--------------------------- */
+
+/* Start Profile-------------
+----------------------------------- */
+
+#profile{
+    /* background-color: yellowgreen; */
+}
+
+.profile-content {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    /* height: 300px; */
+    /* background-color: crimson; */
+    text-align: center;
+    margin-top: 40px;
+}
+
+.profile-content img{
+    border-radius: 50%;
+    
+}
+
+.profile-content p{
+    font-size: 20px;
+    font-weight: 300;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* End Profile-------------
+----------------------------------- */
+
+/* Start Education & Experience-------------
+--------------------------------------- */
+#eduexp{
+    /* display: flex; */
+    background-color: rgb(48, 48, 48);
+}
+.content{
+    width: 70%;
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+    display: flex;
+}
+
+#eduexp h3{
+    /* padding: 40px; */
+    font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+#eduexp article{
+    /* border: 1px solid black; */
+    width: 50%;   
+    color: white;
+    padding: 50px;
+}
+
+.content ul li{
+    padding: 20px;
+}
+
+.exp-item {
+    padding: 10px;
+    margin-left: 100px;
+    position: relative;
+    color: rgb(245, 245, 245);
+}
+
+.exp-item i{
+    font-size: 40px;
+    /* float: left; */
+    position: absolute;
+    left: -70px;
+    top: 30px;
+}
+
+
+.exp-item h4{
+    font-size: 20px;
+    line-height: 0px;
+}
+
+
+
+/* End Education & Experience-------------
+--------------------------------------- */
+
+/*Start Portfolio.--------------------------
+------------------------------------------- */
+.portfolio{
+    min-height: 600px;
+    padding:40px ;
+}
+
+.portfolio h2{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    /* margin-top: 40px; */
+}
+
+.portfolio .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio .content article{
+    /* border: 1px solid black; */
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    /* position: relative; */
+}
+
+.portfolio img{
+    width: 280px;
+    height: 200px;
+}
+
+.btn{
+    /* width: 200px; */
+    background-color: rgb(89, 94, 143);
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px;
+    text-decoration: none;
+}
+/*End Portfolio.--------------------------
+------------------------------------------- */
