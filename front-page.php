@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/5a00dc9b71.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
-    <link rel="stylesheet" href="./assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <title>Costas Nicou</title>
-</head>
-<body>
-    <header>
-        <!-- cover image -->
-        <div class="top-bar">
-
-        </div>
-        <nav class="menu">
-            <ul>
-                <li class="menu-list-item"><a class="menu-link" href="">Home</a></li>
-                <li class="menu-list-item"><a class="menu-link" href="">Education & Experience</a></li>
-                <li class="menu-list-item"><a class="menu-link" href="">Portfolio</a></li>
-                <li class="menu-list-item"><a class="menu-link" href="">Blog</a></li>
-                <li class="menu-list-item"><a class="menu-link" href="">Shop</a></li>
-                
-            </ul>
-        </nav>
-       
-            <!-- transpernt menu -->
-    </header>
-    
+<?php get_header(); ?>
     <div class="cover-img">
         <hgroup>
             <h1>Hi I'm Costas Nicou</h1>
-            <h2>Front End Web Developer & Linux System Administrator</h2>
+            <h2>Computer enthusiastic and Front End Web Developer</h2>
         </hgroup>
         
     </div>
@@ -47,7 +11,7 @@
         <!-- Profile -->
         <div class="profile-content">
             <!-- img -->
-            <img src="./assets/imgs/profile.jpeg" alt="" width="200" height="200">
+            <img src=" <?php echo get_template_directory_uri() . '/assets/imgs/profile.jpeg'; ?>" alt="" width="200" height="200">
             <p>As an enthusiastic researcher and hands on learner during the last years, I have gained valuable experiences through studies and professional encounters. With an immense drive for success I am determined to build a great track record that will benefit any collaboration career path and organization.</p>
         </div>
        
@@ -113,25 +77,25 @@
         <h2>Portfolio</h2>
         <div class="content">
             <article>
-                <img src="./assets/imgs/blog.png" alt="">
-                <a href="" class="btn">View Project</a>
+                <img src=" <?php echo get_template_directory_uri() . '/assets/imgs/blog.png';?>" alt="">
+                <a href="https://nicoycostas.github.io/personalblog/" target="_blank" class="btn">View Project</a>
                 
 
             </article>
 
             <article>
-                <img src="./assets/imgs/google-search.png" alt="" width="280px">
-                <a href="" class="btn">View Project</a>
+                <img src=" <?php echo get_template_directory_uri() . '/assets/imgs/google-search.png';?>" alt="">
+                <a href="https://nicoycostas.github.io/google-search/" target="_blank" class="btn">View Project</a>
             </article>
 
             <article>
-                <img src="./assets/imgs/nasa.png" alt="">
-                <a href="" class="btn">View Project</a>
+                <img src="<?php echo get_template_directory_uri() . '/assets/imgs/nasa.png';?>" alt="">
+                <a href="https://nicoycostas.github.io/server-arex/" target="_blank" class="btn">View Project</a>
             </article>
 
             <article>
-                <img src="./assets/imgs/leviotech.png" alt="">
-                <a href="" class="btn">View Project</a>
+                <img src="<?php echo get_template_directory_uri() . '/assets/imgs/leviotech.png'; ?>" alt="">
+                <a href="https://nicoycostas.github.io/leviotech/" target="_blank" class="btn">View Project</a>
             </article>
 
            
@@ -139,22 +103,33 @@
 
     </section>
 
-    <section class="skills">
-        <div class="skill-name">HTML</div>
-        <div class="skill-name">CSS</div>
-        <div class="skill-name">JS</div>
-        <div class="skill-name">WORDPRESS</div>
+    <section class="contact">
+        
     </section>
-    
     <!-- Articles -->
-    <section>
+    <section class="blog">
+        <h2>Blog</h2>
+        <div class="blog-content">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article>
+              
+                <!-- image -->
+                <div class="img" style="background-image: url(<?php echo the_post_thumbnail_url();?>)">
+                    
+                </div>
+                <h3><?php the_title(); ?></h3>
+                <?php the_excerpt() ?>
+
+                <!-- butn -->
+                <a href="" class="btn">Read More</a>
+            </article>
+            <?php endwhile; else : ?>
+            <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
+
+        </div>
         
 
     </section>
 
-    <footer>
-        <p>footer</p>
-    </footer>
-        
-</body>
-</html>
+<?php get_footer(); ?>

@@ -1,0 +1,266 @@
+/* START Global-----------
+------------------------ */
+
+    *{
+        box-sizing: border-box;
+    }
+
+    html,body{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Roboto', sans-serif;
+    }
+
+/* END Global-----------
+------------------------ */
+
+/*START header------------
+--------------------------- */
+    .header{
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+    .top-bar{
+        background-color: rgb(89, 94, 143);
+        height: 20px;
+    }
+
+    .menu{
+        height: 70px;
+        background-color: white;
+        padding: 10px;
+
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            /* margin: 0; */
+            padding: 0;
+        
+        }
+
+    }
+
+    // menu items
+    .menu-list-item{
+        padding:0 20px;
+    
+    }
+    // menu links
+    .menu-link{
+        text-decoration: none;
+        color: rgb(87, 85, 85);
+        &:hover{
+            color: rgb(39, 38, 38);
+            // font-weight:bold;
+        }
+    }
+    .cover-img{
+        background-image: url("../imgs/cover-image.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    hgroup{
+    color: white;
+
+    h1{
+        font-size: 70px;
+        line-height: 25px;
+        text-shadow: 4px 5px 13px rgba(0,0,0,0.74);
+        }
+
+        h2{
+            font-size: 50px;
+            text-shadow: 4px 5px 13px rgba(0,0,0,0.74);       
+        }
+        
+    }
+
+/*END header------------
+--------------------------- */
+
+// START PROFILE-------
+//-------------------------
+
+    .profile-content {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        /* height: 300px; */
+        /* background-color: crimson; */
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .profile-content img{
+        border-radius: 50%;
+        
+    }
+
+    .profile-content p{
+        font-size: 20px;
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+/* End Profile-------------
+----------------------------------- */
+
+/* Start Education & Experience-------------
+--------------------------------------- */
+    #eduexp{
+        /* display: flex; */
+        background-color: rgb(48, 48, 48);
+    }
+    .content{
+        width: 70%;
+        /* background-color: aquamarine; */
+        margin: 0 auto;
+        display: flex;
+    }
+
+    #eduexp h3{
+        /* padding: 40px; */
+        font-size: 25px;
+        font-family: 'Indie Flower', cursive;
+
+    }
+
+    #eduexp article{
+        /* border: 1px solid black; */
+        width: 50%;   
+        color: white;
+        padding: 50px;
+    }
+
+    .content ul li{
+        padding: 20px;
+    }
+
+    .exp-item {
+        padding: 10px;
+        margin-left: 100px;
+        position: relative;
+        color: rgb(245, 245, 245);
+    }
+
+    .exp-item i{
+        font-size: 40px;
+        /* float: left; */
+        position: absolute;
+        left: -70px;
+        top: 30px;
+    }
+    .exp-item h4{
+        font-size: 20px;
+        line-height: 0px;
+    }
+/* End Education & Experience-------------
+--------------------------------------- */
+
+/*Start Portfolio.--------------------------
+------------------------------------------- */
+    .portfolio{
+        // min-height: 600px;
+        padding:40px ;
+    }
+
+    .portfolio h2{
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        /* margin-top: 40px; */
+    }
+
+    .portfolio .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .portfolio .content article{
+        /* border: 1px solid black; */
+        width: 200px;
+        height: 300px;
+        margin-top: 50px;
+        /* position: relative; */
+    }
+
+    .portfolio .content article img{
+        width: 280px !important;
+        height: 200px;
+        transition: all 2s;
+        &:hover{
+            // transform: rotate(1.0turn);
+            transform: scale(1.2);
+        }
+    }
+
+    .btn{
+        /* width: 200px; */
+        background-color: rgb(89, 94, 143);
+        color: white;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px;
+        text-decoration: none;
+        transition: all 2s;
+
+        &:hover{
+            background-color: rgb(69, 74, 126);
+            
+        }
+    }
+/*End Portfolio.--------------------------
+------------------------------------------- */
+
+// start blog
+
+.blog{
+    min-height: 400px;
+    padding: 40px;
+    background-color: rgb(238, 238, 238);
+}
+.blog h2{
+    text-align: center;
+    // font-family: 'Indie Flower', cursive;
+}
+
+.blog-content{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    article{
+        width: 250px;
+        height: 500px;
+        // border: 1px solid black;
+        margin-top: 40px;
+
+    
+
+        .img{
+            width: 250px; 
+            height: 250px; 
+            // border: 1px solid black;
+           
+        }
+
+        p{
+            
+            // background-color: darkgrey;
+            height: 100px;
+            overflow: hidden;
+            
+        }
+    }
+}
+// end blog
